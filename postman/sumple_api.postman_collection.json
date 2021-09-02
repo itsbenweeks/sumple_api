@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "cf01cec4-ba4d-40f9-b56a-84acad8b7c26",
+		"name": "sumple_api",
+		"description": "Just a simple api to collect sums.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /metric/{key}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"value\":{{post_value}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root_url}}/metric/{{key}}",
+					"host": [
+						"{{root_url}}"
+					],
+					"path": [
+						"metric",
+						"{{key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /metric/{key}/sum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root_url}}/metric/{{key}}/sum",
+					"host": [
+						"{{root_url}}"
+					],
+					"path": [
+						"metric",
+						"{{key}}",
+						"sum"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "root_url",
+			"value": "http://127.0.0.1:5000"
+		},
+		{
+			"key": "key",
+			"value": "foo"
+		},
+		{
+			"key": "post_value",
+			"value": "2"
+		}
+	]
+}

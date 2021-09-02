@@ -27,3 +27,15 @@ pip install -e ".[test]"
 ### Testing
 
 You can run the testing suite by running `tox` from the command line.
+
+# Running Sumple API
+Once you have setup Sumple API, you can run it from your terminal with the
+following command: 
+```sh
+sumple_api
+```
+
+## PostMan Collection
+If you use [PostMan](https://www.postman.com/downloads/) then you can import a
+collection to use against this API. The file to import is located at
+`postman/sumple_api.postman_collection.json`.
