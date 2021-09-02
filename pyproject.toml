@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 40.06.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py39
+
+[testenv]
+deps = .[test]
+commands = pytest
+"""
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
